@@ -318,7 +318,7 @@ void doTriac()
     SCR_VoltageRegulation(1, 0);
     SCR_ChannelDisable(1);
   } else {
-    SCR_VoltageRegulation(1, (power * 1.7) + 9);
+    SCR_VoltageRegulation(1, power);  // power level of 0-100% sets conduction angle of 0-100 degrees on triac board.
 
     if (powerLast == 0){
       SCR_ChannelEnable(1);
